@@ -1,0 +1,4 @@
+MaSV       | Ten                  | Diem    | Xep hang  
+---------------------------------------------------------------
+1382270    | Ha Huy Duy Minh      | 10.00   | gioi      
+1384270    | Nguyen Anh Tuan      | 10.00   | gioi      
