@@ -6,4 +6,5 @@ int main(){
     std::cout << "Chuoi can xuat";
     cout << "Chuoi 2";
     cout << "Me may beo";
+    return 0;
 }
