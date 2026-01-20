@@ -42,7 +42,6 @@ public class test48 {
         int chuHoa=0;
         int chuThuong=0;
         if (n == null || n.isEmpty()) {
-        System.out.println("Mat khau khong duoc rong.");
         return false;
         }
         for (int i=0;i<n.length();i++){
@@ -56,7 +55,6 @@ public class test48 {
         }
         boolean ketQua=true;
         if (chuHoa<1 || chuThuong<1 || chuSo<1){
-            System.out.println("Mat khau khong hop le, vui long nhap lai: ");
             ketQua=false;
         }
         return ketQua;
