@@ -1,11 +1,10 @@
-#include "Bai1.h"
+#include <iostream>
+using namespace std;
 
-Bai1::Bai1()
-{
-    //ctor
-}
-
-Bai1::~Bai1()
-{
-    //dtor
+int main(){
+    std::cout << "Hello World!\n";
+    std::cout << "Chuoi can xuat";
+    cout << "Chuoi 2";
+    cout << "Me may beo";
+    return 0;
 }
