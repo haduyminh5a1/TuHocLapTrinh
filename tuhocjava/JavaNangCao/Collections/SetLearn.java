@@ -1,6 +1,6 @@
-package JavaNangCao.Collections;
+
 import java.util.*;
-public class Set {
+public class SetLearn {
     // add size contain remove addAll removeAll retainAll
     // HashSet LinkedHashSet
     public static void main(String[] args) {
