@@ -57,6 +57,6 @@ public class SetLearn {
         for (String x : arr){
             set2.add(x);
         }
-
+        input.close();
     }  
 }

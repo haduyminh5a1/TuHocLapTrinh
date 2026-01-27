@@ -54,5 +54,53 @@ public class MapLearn {
         for (Map.Entry<Integer, Integer> entry : map2.entrySet()){
             System.out.println(entry.getKey() + " " + entry.getValue());
         }
+
+
+        //LinkedHashMap
+        Map<Integer, Integer> map3 = new LinkedHashMap<>();
+        int m = input.nextInt();
+        for (int i=0;i<m;i++){
+            if (map3.containsKey(i)){
+                int tanSuat = map3.get(i);
+                ++tanSuat;
+                map3.put(i, tanSuat);
+            }
+            else {
+                map3.put(i, 1);
+            }
+        }
+        for (Map.Entry<Integer, Integer> entry : map3.entrySet()){
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+
+        //TreeMap
+        TreeMap<Integer, Integer> tree = new TreeMap<>();
+
+        //Comparators
+        // Comparator<String> cmp = new Comparator<String>(){
+        //     @Override
+        //     public int compare(String a, String b){
+        //         return b.length() - a.length();
+        //     }
+        // };
+
+        //Key trong treemap se tang dan
+        // tree.put("abcd", 5);
+        // tree.put("z", 6);
+        // tree.put("ttt", 6);
+        // tree.put("yya", 1);
+
+        for (int i=1;i<=10;i+=2){
+            tree.put(i, 2*i);
+        }
+
+        for (Map.Entry<Integer, Integer> entry : tree.entrySet()){
+            System.out.println(entry.getKey() + " " + entry.getValue());
+        }
+        System.out.println(tree.firstKey());
+        System.out.println(tree.lastKey());
+        System.out.println(tree.firstEntry());
+        System.out.println(tree.lastEntry());
+        
     }
 }
