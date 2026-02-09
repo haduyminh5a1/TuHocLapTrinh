@@ -22,7 +22,7 @@ public class SinhVien {
     }
     @Override
     public String toString() {
-        return "SinhVien [hoTen=" + hoTen + ", diem=" + diem + "]";
+        return "SinhVien [hoTen = " + hoTen + ", diem = " + diem + "]";
     }
     //Constructors
     public SinhVien() {

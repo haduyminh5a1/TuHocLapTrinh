@@ -4,20 +4,86 @@ import java.util.*;
 
 public class ValidParentheses {
     public static boolean isValid(String s){
-        if (s.length() == 0 || s.isEmpty()) return true;
-        int l = s.length();
-        Set<Character> check = new HashSet<>();
-        for (int i=0;i<s.length()-1;i++){
-            check.add(s.charAt(i));
-            for (int j=i;j<s.length();j++){
-                if (check.contains(s.charAt(j))){
-                    check.remove(check);
-                    l--;
+        Stack<Character> stack = new Stack<>();
+        for(char ch : s.toCharArray()){
+            if(ch == '(' || ch == '[' || ch == '{'){
+                stack.push(ch);
+            }
+            else{
+                if(stack.isEmpty()){
+                    return false;
+                }
+                char top = stack.pop();
+
+                if(ch == ')' && top != '('){
+                    return false;
+                }
+                if(ch == ']' && top != '['){
+                    return false;
+                }
+                if(ch == '}' && top != '{'){
+                    return false;
                 }
             }
         }
-        if (l == 0) return true;
-        return false;
+        return stack.isEmpty();
+    /*  if (s.length() % 2 != 0) {
+            return false;
+        }
+
+        Deque<Character> stack = new ArrayDeque<>();
+
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                stack.push(c);
+            } else {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+
+                char top = stack.pop();
+
+                if ((c == ')' && top != '(') ||
+                    (c == '}' && top != '{') ||
+                    (c == ']' && top != '[')) {
+                    return false;
+                }
+            }
+        }
+
+        return stack.isEmpty(); */
+    /*if (s.length() % 2 != 0) {
+            return false;
+        }
+
+        Map<Character, Character> bracketMap = new HashMap<>();
+        bracketMap.put(')', '(');
+        bracketMap.put('}', '{');
+        bracketMap.put(']', '[');
+
+        Deque<Character> stack = new ArrayDeque<>();
+
+        for (char c : s.toCharArray()) {
+            if (bracketMap.containsValue(c)) {
+                stack.push(c);
+            } else {
+                if (stack.isEmpty() || stack.pop() != bracketMap.get(c)) {
+                    return false;
+                }
+            }
+        }
+
+        return stack.isEmpty(); */
+    /*  char[] arr = s.toCharArray();
+        int i=0;
+        for(char a: arr){
+            if((a&3)==1){
+                if(i==0 || (char)(a-arr[--i])>2) return false;
+            }else{
+                arr[i++]=a;
+            }
+        }
+        return i==0; */
     }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);

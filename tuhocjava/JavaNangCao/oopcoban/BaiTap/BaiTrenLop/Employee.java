@@ -37,5 +37,10 @@ public class Employee {
     public void setHireDate(String hireDate) {
         this.hireDate = hireDate;
     }
+
+    public double salaryCalculate() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'salaryCalculate'");
+    }
     
 }

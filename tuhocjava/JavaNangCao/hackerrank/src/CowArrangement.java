@@ -55,7 +55,7 @@ public class CowArrangement {
             int k = sc.nextInt();
             sc.close();
 
-            // ✅ Nếu k = 0 → kết quả là 0 theo yêu cầu
+            // Nếu k = 0 → kết quả là 0 theo yêu cầu
             if (k == 0) {
                 System.out.println(0);
                 return;
