@@ -27,7 +27,7 @@ public class PayrollSystem {
                 employeeList.add(new FullTimeEmployee(id, name));
             } else {
                 int s = getIntInput("Select Shift (1-DAY, 2-NIGHT): ", 1, 2);
-                Contractor.Shift shift = (s == 1) ? Contractor.Shift.DAY : Contractor.Shift.NIGHT;
+                Contractor.Shift shift = (s == 1) ? Contractor.Shift.DAYSHIFT : Contractor.Shift.NIGHTSHIFT;
                 int hours = getIntInput("Enter working hours (0-500): ", 0, 500);
                 employeeList.add(new Contractor(id, name, shift, hours));
             }

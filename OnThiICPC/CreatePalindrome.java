@@ -5,6 +5,7 @@ public class CreatePalindrome {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String s = input.nextLine();
+        input.close();
         if (s.length() <= 0 || s == null){
             System.out.println("NO SOLUTION");
             return;
@@ -21,6 +22,7 @@ public class CreatePalindrome {
                 oddIndex = i;
             }
         }
+        
         if (oddCount >= 2){
             System.out.println("NO SOLUTION");
             return;
@@ -37,5 +39,6 @@ public class CreatePalindrome {
 
         String palindrome = firstHalf.toString() + middle + secondHalf;
         System.out.println(palindrome);
+        
     }
 }

@@ -1,3 +1,4 @@
+package JavaNangCao.DataStructures.SinglyLinkedList;
 
 import java.util.Scanner;
 class Node {
@@ -11,7 +12,7 @@ class Node {
     }
 }
 
-public class test70 {
+public class LinkedList {
 public static boolean search(Node head, int data){
     Node currentNode = head;
     while (currentNode!=null){

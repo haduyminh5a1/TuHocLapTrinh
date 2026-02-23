@@ -14,11 +14,5 @@ import static java.util.stream.Collectors.toList;
 
 
 public class SparseArrays {
-    public static List<Integer> matchingStrings(List<String> stringList, List<String> queries) {
-        
-    }
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        
-    }
+    
 }

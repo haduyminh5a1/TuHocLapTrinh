@@ -1,3 +1,5 @@
+package JavaNangCao.ExceptionHandling;
+
 public class Vidu2 {
     public static void main(String[] args) {
         int a = 10;
