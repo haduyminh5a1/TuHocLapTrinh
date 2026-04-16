@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class FileLearning {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter the file name: ");
         String fileName = input.nextLine();

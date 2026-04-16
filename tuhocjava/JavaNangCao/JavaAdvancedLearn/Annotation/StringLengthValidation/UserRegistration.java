@@ -1,10 +1,12 @@
-package JavaNangCao.JavaAdvancedLearn.StringLengthValidation;
+package JavaNangCao.JavaAdvancedLearn.Annotation.StringLengthValidation;
 
 public class UserRegistration {
     @Length(min = 5, max = 20)
+    @NotNull
     private String username;
 
     @Length(min = 8, max = 32)
+    @NotNull
     private String password;
 
     private String bio;

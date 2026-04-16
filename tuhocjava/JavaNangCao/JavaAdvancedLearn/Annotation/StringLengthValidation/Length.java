@@ -1,4 +1,4 @@
-package JavaNangCao.JavaAdvancedLearn.StringLengthValidation;
+package JavaNangCao.JavaAdvancedLearn.Annotation.StringLengthValidation;
 import java.lang.annotation.*;
 
 @Retention(RetentionPolicy.RUNTIME)

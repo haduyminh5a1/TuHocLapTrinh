@@ -1,11 +1,12 @@
 public class Student {
     private String id;
     private String name;
-    private float score;
+    private double score;
+    public static int instanceCount = 0;
     //Constructors
     public Student(){
     }
-    public Student(String id, String name, float score){
+    public Student(String id, String name, double score){
         this.id = id;
         this.name = name;
         this.score = score;
@@ -21,12 +22,13 @@ public class Student {
         score = newScore;
     }
     public String getID(){
+        instanceCount++;
         return id;
     }
     public String getName(){
         return name;
     }
-    public float getScore(){
+    public double getScore(){
         return score;
     }
     public String getRank(){

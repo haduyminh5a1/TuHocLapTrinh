@@ -1,0 +1,185 @@
+<!-- SaaS Login Page -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign In | SaaS Horizon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-error": "#ffffff",
+                        "secondary-container": "#acbfff",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#ededf9",
+                        "inverse-primary": "#b4c5ff",
+                        "on-secondary-container": "#394c84",
+                        "surface-tint": "#0053db",
+                        "surface-container-low": "#f3f3fe",
+                        "on-secondary-fixed": "#00174b",
+                        "tertiary-fixed": "#ffdbcd",
+                        "outline-variant": "#c3c6d7",
+                        "surface-container-high": "#e7e7f3",
+                        "primary-container": "#2563eb",
+                        "tertiary-container": "#bc4800",
+                        "surface-bright": "#faf8ff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary-fixed-variant": "#31447b",
+                        "on-primary-fixed": "#00174b",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#191b23",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "error-container": "#ffdad6",
+                        "background": "#faf8ff",
+                        "on-primary-container": "#eeefff",
+                        "tertiary": "#943700",
+                        "on-surface-variant": "#434655",
+                        "secondary": "#495c95",
+                        "surface-variant": "#e1e2ed",
+                        "outline": "#737686",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "surface-dim": "#d9d9e5",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "surface-container-highest": "#e1e2ed",
+                        "inverse-surface": "#2e3039",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "on-tertiary-container": "#ffede6",
+                        "error": "#ba1a1a",
+                        "primary": "#004ac6",
+                        "surface": "#faf8ff",
+                        "inverse-on-surface": "#f0f0fb",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#dbe1ff",
+                        "on-surface": "#191b23"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar: Fixed Shell with Glassmorphism -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(25,27,35,0.06)] h-16 flex justify-between items-center px-8 max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">SaaS Horizon</span>
+<div class="hidden md:flex gap-6">
+<a class="font-['Inter'] antialiased text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200" href="#">Dashboard</a>
+<a class="font-['Inter'] antialiased text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200" href="#">Analytics</a>
+<a class="font-['Inter'] antialiased text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200" href="#">Projects</a>
+<a class="font-['Inter'] antialiased text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200" href="#">Team</a>
+<a class="font-['Inter'] antialiased text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-all duration-200" href="#">Settings</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-['Inter'] antialiased text-sm font-medium text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all duration-200 active:scale-100" onclick="window.location.href='SignUp.html'"">Sign Up</button>
+<button class="signature-gradient text-white px-5 py-2 rounded-xl text-sm font-medium transition-transform active:scale-95">Get Started</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center px-6 pt-24 pb-12 relative overflow-hidden">
+<!-- Ambient Background Element -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<!-- Login Card -->
+<div class="w-full max-w-[440px] bg-surface-container-lowest rounded-xl shadow-[0px_20px_40px_rgba(25,27,35,0.06)] relative z-10 p-10">
+<div class="text-center mb-10">
+<h1 class="text-2xl font-bold tracking-tight text-on-surface mb-2">Welcome Back</h1>
+<p class="text-on-surface-variant text-sm">Enter your credentials to access your workspace</p>
+</div>
+<form class="space-y-6" onsubmit="return false;">
+<!-- Email Field -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface" for="email">Email Address</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3 bg-surface-container-lowest border-0 ring-1 ring-outline-variant/30 rounded-xl text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all duration-200" id="email" name="email" placeholder="name@company.com" type="email"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="block text-sm font-semibold text-on-surface" for="password">Password</label>
+<a class="text-xs font-medium text-primary hover:underline" href="#">Forgot password?</a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3 bg-surface-container-lowest border-0 ring-1 ring-outline-variant/30 rounded-xl text-on-surface placeholder:text-outline focus:ring-2 focus:ring-primary/20 focus:outline-none transition-all duration-200" id="password" name="password" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center">
+<input class="h-4 w-4 rounded border-outline-variant text-primary focus:ring-primary/20" id="remember" name="remember" type="checkbox"/>
+<label class="ml-3 block text-sm text-on-surface-variant" for="remember">Remember this device</label>
+</div>
+<!-- Primary Action -->
+<button class="w-full signature-gradient text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 active:scale-[0.98] transition-all duration-200 flex justify-center items-center gap-2" type="button" onclick="signin()">
+                    Sign In to Account
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<!-- Footer Note -->
+<div class="mt-8 text-center">
+<p class="text-sm text-on-surface-variant">
+                    Don't have an account? 
+                    <a class="text-primary font-semibold hover:underline" href="SignUp.html">Sign Up</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Footer: Tonal Shift Shell -->
+<footer class="w-full border-t border-slate-200/15 dark:border-slate-800/15 bg-slate-50 dark:bg-slate-950 flex flex-col md:flex-row justify-between items-center px-12 py-8">
+<div class="mb-4 md:mb-0">
+<span class="text-lg font-bold text-slate-900 dark:text-white">SaaS Horizon</span>
+<p class="font-['Inter'] text-xs text-slate-500 dark:text-slate-400 mt-1">© 2024 SaaS Horizon. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Documentation</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Support</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors" href="#">Contact</a>
+</div>
+<script>
+function signin() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    fetch("/signin", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ email, password })
+    })
+    .then(res => res.text())
+    .then(data => alert(data));
+}
+</script>
+</footer>
+</body></html>

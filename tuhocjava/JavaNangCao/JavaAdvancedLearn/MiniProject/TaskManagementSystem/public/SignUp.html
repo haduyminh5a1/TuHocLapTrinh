@@ -1,0 +1,202 @@
+<!-- SaaS Signup Page -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#ffffff",
+              "secondary-container": "#acbfff",
+              "on-primary": "#ffffff",
+              "surface-container": "#ededf9",
+              "inverse-primary": "#b4c5ff",
+              "on-secondary-container": "#394c84",
+              "surface-tint": "#0053db",
+              "surface-container-low": "#f3f3fe",
+              "on-secondary-fixed": "#00174b",
+              "tertiary-fixed": "#ffdbcd",
+              "outline-variant": "#c3c6d7",
+              "surface-container-high": "#e7e7f3",
+              "primary-container": "#2563eb",
+              "tertiary-container": "#bc4800",
+              "surface-bright": "#faf8ff",
+              "tertiary-fixed-dim": "#ffb596",
+              "on-secondary-fixed-variant": "#31447b",
+              "on-primary-fixed": "#00174b",
+              "on-secondary": "#ffffff",
+              "on-background": "#191b23",
+              "primary-fixed": "#dbe1ff",
+              "on-tertiary-fixed": "#360f00",
+              "error-container": "#ffdad6",
+              "background": "#faf8ff",
+              "on-primary-container": "#eeefff",
+              "tertiary": "#943700",
+              "on-surface-variant": "#434655",
+              "secondary": "#495c95",
+              "surface-variant": "#e1e2ed",
+              "outline": "#737686",
+              "primary-fixed-dim": "#b4c5ff",
+              "on-tertiary-fixed-variant": "#7d2d00",
+              "surface-dim": "#d9d9e5",
+              "surface-container-lowest": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "on-primary-fixed-variant": "#003ea8",
+              "surface-container-highest": "#e1e2ed",
+              "inverse-surface": "#2e3039",
+              "secondary-fixed-dim": "#b4c5ff",
+              "on-tertiary-container": "#ffede6",
+              "error": "#ba1a1a",
+              "primary": "#004ac6",
+              "surface": "#faf8ff",
+              "inverse-on-surface": "#f0f0fb",
+              "on-error-container": "#93000a",
+              "secondary-fixed": "#dbe1ff",
+              "on-surface": "#191b23"
+            },
+            fontFamily: {
+              "headline": ["Inter"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .signature-gradient {
+            background: linear-gradient(135deg, #004ac6 0%, #2563eb 100%);
+        }
+        .glass-header {
+            background: rgba(250, 248, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(25,27,35,0.06)] h-16 flex justify-between items-center px-8 max-w-full">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">SaaS Horizon</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-['Inter'] antialiased text-sm font-medium transition-all duration-200" href="#">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-['Inter'] antialiased text-sm font-medium transition-all duration-200" href="#">Analytics</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-['Inter'] antialiased text-sm font-medium transition-all duration-200" href="#">Projects</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-['Inter'] antialiased text-sm font-medium transition-all duration-200" href="#">Team</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-['Inter'] antialiased text-sm font-medium transition-all duration-200" href="#">Settings</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<a class="text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white font-['Inter'] antialiased text-sm font-medium px-4 py-2 transition-all duration-200" href="SignIn.html">Sign In</a>
+<a class="bg-primary-container text-white px-5 py-2 rounded-xl text-sm font-medium hover:brightness-110 active:scale-95 transition-all" href="#">Get Started</a>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex items-center justify-center px-6 pt-24 pb-12 bg-surface-container-low relative overflow-hidden">
+<!-- Subtle Ambient Background Element -->
+<div class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] rounded-full bg-primary/5 blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-secondary/5 blur-[100px]"></div>
+<!-- Signup Card Container -->
+<div class="w-full max-w-[480px] z-10">
+<div class="bg-surface-container-lowest p-10 md:p-12 rounded-xl shadow-[0px_20px_40px_rgba(25,27,35,0.06)] border border-outline-variant/15">
+<div class="text-center mb-10">
+<h1 class="text-[32px] font-extrabold tracking-tight text-on-surface mb-3">Create your account</h1>
+<p class="text-on-surface-variant body-lg">Join SaaS Horizon to start your journey into fluid analytics and data intelligence.</p>
+</div>
+<form action="#" class="space-y-6" onsubmit="return false;">
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface/80 px-1" for="full-name">Full Name</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-outline" id="full-name" name="full-name" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface/80 px-1" for="email">Email Address</label>
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-outline" id="email" name="email" placeholder="name@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface/80 px-1" for="password">Password</label>
+<div class="relative">
+<input class="w-full px-4 py-3 bg-surface-container-lowest border border-outline-variant/30 rounded-xl focus:ring-4 focus:ring-primary/10 focus:border-primary outline-none transition-all placeholder:text-outline" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+<p class="text-[11px] text-on-surface-variant px-1 mt-1">Must be at least 8 characters with a mix of letters and symbols.</p>
+</div>
+<div class="flex items-start gap-3 py-2">
+<input class="mt-1 w-4 h-4 text-primary border-outline-variant rounded focus:ring-primary/20" id="terms" type="checkbox"/>
+<label class="text-xs text-on-surface-variant leading-relaxed" for="terms">
+                            I agree to the <a class="text-primary hover:underline font-medium" href="#">Terms of Service</a> and <a class="text-primary hover:underline font-medium" href="#">Privacy Policy</a>.
+                        </label>
+</div>
+<button class="w-full signature-gradient text-white py-4 rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-primary/20 hover:brightness-110 active:scale-[0.98] transition-all flex justify-center items-center gap-2" type="button" onclick="signup()">
+                        Create Account
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<div class="mt-10 pt-8 border-t border-outline-variant/10 text-center">
+<p class="text-sm text-on-surface-variant">
+                        Already have an account? 
+                        <a class="text-primary font-bold hover:underline ml-1" href="SignIn.html">Sign In</a>
+</p>
+</div>
+</div>
+<div class="mt-8 text-center px-4">
+<p class="text-xs text-on-surface-variant italic opacity-60">
+                    Trusted by over 10,000 teams including top Fortune 500 companies.
+                </p>
+</div>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="w-full border-t border-slate-200/15 dark:border-slate-800/15 bg-slate-50 dark:bg-slate-950 flex flex-col md:flex-row justify-between items-center px-12 py-8">
+<div class="mb-4 md:mb-0">
+<span class="text-lg font-bold text-slate-900 dark:text-white">SaaS Horizon</span>
+<p class="font-['Inter'] text-xs text-slate-500 dark:text-slate-400 mt-1">© 2024 SaaS Horizon. All rights reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors opacity-80 hover:opacity-100" href="#">Documentation</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors opacity-80 hover:opacity-100" href="#">Support</a>
+<a class="font-['Inter'] text-xs text-slate-500 hover:text-blue-600 transition-colors opacity-80 hover:opacity-100" href="#">Contact</a>
+</div>
+<script>
+function signup() {
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+
+    fetch("/signup", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({ email, password })
+    })
+    .then(res => res.text())
+    .then(data => {
+      if (data.includes("succesful!!!")) {
+        alert("Signup succesful!!!");
+        window.location.href = "SignIn.html";
+      }
+      else if (data.includes("used")) {
+        alert("Email is used, please choose another");
+      }
+      else {
+        alert(data);
+      }
+    });
+}
+</script>
+</footer>
+</body></html>

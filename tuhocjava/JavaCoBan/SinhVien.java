@@ -3,8 +3,13 @@ public class SinhVien {
     public String hoTen;
     public String maSV;
     public double diemTB;
-    //Constructor
+    //Constructor (Khởi tạo)
     public SinhVien(){
+    }
+
+    public SinhVien(String hoTen, String maSV){
+        this.hoTen = hoTen;
+        this.maSV = maSV;
     }
 
     public SinhVien(double diemTB, String hoTen, String maSV) {
@@ -12,12 +17,12 @@ public class SinhVien {
         this.hoTen = hoTen;
         this.maSV = maSV;
     }
-    
 
     //Phương thức
     public String thongTinSinhVien(){
         return "["+ hoTen + ", " + maSV + ", "+ diemTB + "]";
     }
+
     void xemDiem(){
         System.out.println("Diem cua sinh vien: " + diemTB);
     }
