@@ -67,7 +67,7 @@ public class Demo {
         input.close();
     }
     public static String findMax(Student[] studList, int listSize){
-        float maxScore = studList[0].getScore();
+        double maxScore = studList[0].getScore();
         String name = studList[0].getName();
         for (int i=0;i<listSize;i++){
             if (studList[i].getScore()>maxScore){
@@ -77,7 +77,7 @@ public class Demo {
         }
         return name;
     }
-    public static float searchByName(Student[] studList, String name, int listSize){
+    public static double searchByName(Student[] studList, String name, int listSize){
         for (int i=0;i<listSize;i++){
             if (name.equalsIgnoreCase(studList[i].getName())){
                 return studList[i].getScore();
