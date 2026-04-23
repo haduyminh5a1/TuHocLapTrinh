@@ -1,5 +1,8 @@
 package JavaNangCao.JavaAdvancedLearn.GUILearn.GUI_GiaoTrinh;
 import javax.swing.*;
+import java.awt.event.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * The KiloConverter class displays a JFrame that lets users
@@ -28,6 +31,7 @@ public class KiloConverter extends JFrame {
         buildPanel();
         add(panel);
 
+
         setVisible(true);
     }
 
@@ -43,6 +47,9 @@ public class KiloConverter extends JFrame {
         //Create a button with the caption "Calculate"
         calcButton = new JButton("Calculate");
 
+        //Add an action to the Calculate button
+        calcButton.addActionListener(new CalcButtonListener());
+
         //Create a JPanel object and let the panel field reference it
         panel = new JPanel();
 
@@ -50,6 +57,37 @@ public class KiloConverter extends JFrame {
         panel.add(messageLabel);
         panel.add(kiloTextField);
         panel.add(calcButton);
+    }
+
+    /** */
+    private class CalcButtonListener implements ActionListener {
+
+        /**
+         * The actionPerformed method executes when the user
+         * clicks on the Calculate button.
+         * @param e The event object
+         */
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            final double CONVERSION = 0.614;
+            String input;
+            double miles;
+
+            /*Get the text entered by user into the text field */
+            input = kiloTextField.getText();
+
+            Pattern pattern = Pattern.compile("\\d*");
+            Matcher matcher = pattern.matcher(input);
+            if (matcher.matches()){
+                //Convert the kilometers input to miles
+                miles = Double.parseDouble(input) * CONVERSION;
+                JOptionPane.showMessageDialog(null, input + " kilometers is " + miles + " miles");
+            }
+            else {
+                JOptionPane.showMessageDialog(null, "This is not a valid input");
+            }
+        }
+        
     }
 
     /**
