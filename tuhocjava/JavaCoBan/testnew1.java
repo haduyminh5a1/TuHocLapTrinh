@@ -17,7 +17,5 @@ public class testnew1 {
             }
         }
         System.out.println(sb.reverse().toString());
-
-        
     }
 }
