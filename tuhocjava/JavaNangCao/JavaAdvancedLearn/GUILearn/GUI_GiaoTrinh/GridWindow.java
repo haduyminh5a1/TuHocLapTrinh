@@ -1,34 +1,36 @@
 package JavaNangCao.JavaAdvancedLearn.GUILearn.GUI_GiaoTrinh;
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
 
-public class BorderWindow extends JFrame {
+public class GridWindow extends JFrame {
     private final int WINDOW_WIDTH = 400;
     private final int WINDOW_HEIGHT = 300;
 
-    public BorderWindow() {
-        setTitle("Border Window");
+    public GridWindow() {
+        setTitle("Grid Window");
         setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(new BorderLayout(5, 10));
+        setLocationRelativeTo(null);
+
+        setLayout(new GridLayout(2, 3));
 
         JButton button1 = new JButton("Button 1");
         JButton button2 = new JButton("Button 2");
         JButton button3 = new JButton("Button 3");
         JButton button4 = new JButton("Button 4");
         JButton button5 = new JButton("Button 5");
+        JButton button6 = new JButton("Button 6");
 
-        add(button1, BorderLayout.NORTH);
-        add(button2, BorderLayout.SOUTH);
-        add(button3, BorderLayout.EAST);
-        add(button4, BorderLayout.WEST);
-        add(button5, BorderLayout.CENTER);
+        add(button1);
+        add(button2);
+        add(button3);
+        add(button4);
+        add(button5);
+        add(button6);
 
-        setLocationRelativeTo(null);
         setVisible(true);
     }
-
     public static void main(String[] args) {
-        new BorderWindow();
+        new GridWindow();
     }
 }
