@@ -1,0 +1,2 @@
+SV: minh | So mon < 5.5: 2
+SV: tuan | So mon < 5.5: 2
